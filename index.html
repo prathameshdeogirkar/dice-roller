@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="./images/dice.png" class="main-product-img" id="dice" />
+
+    <button type="button" class="btn-spin" onclick="rollDice()">Roll The Dice</button>
+
+
+    <script>
+        const diceImg = document.getElementById("dice");
+        function rollDice() {
+            const min = 1;
+            const max = 7;
+            const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            if (randomNumber == 1) {
+                diceImg.src = "./images/one.png";
+            }
+            else if (randomNumber == 2) {
+                diceImg.src = "./images/two.png";
+            }
+            else if (randomNumber == 3) {
+                diceImg.src = "./images/three.png";
+            }
+            else if (randomNumber == 4) {
+                diceImg.src = "./images/four.png";
+            }
+            else if (randomNumber == 5) {
+                diceImg.src = "./images/five.png";
+            }
+            else {
+                diceImg.src = "./images/six.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
